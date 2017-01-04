@@ -1,0 +1,144 @@
+// ==========================================================================
+// WRAPPER LAYOUT
+// ==========================================================================
+//
+// CONFIG + SETTINGS
+// Max-width of the wrapper module regardless of the breakpoint,
+// Pulled from grid config, smaller for ie8
+$_wrapper-max-width: strip-units(map-get(map-get(global-config('grids'), if(ie8(), large, xlarge)), width));
+
+// Gutter width of the wrapper to aid legibility on smaller devices.
+$_wrapper-padding: 15;
+$_wrapper-padding-medium: 20;
+
+// Width difference between the header/footer and content wrapper on
+// largest breakpoints.
+$_wrapper-column-width: 9.5%;
+
+
+
+/*doc
+---
+title: Wrapper
+name: 1_wrapper
+category: layout
+---
+
+The wrapper gives a max-width to the child content and centers the whole block.
+ On larger breakpoints it adds one column of padding to the left and right for
+  the header and footer sections to use the `.wrapper--stretch` modifier.
+
+This module is designed to be used in conjuction with [grid][2_grid] classes:
+
+```wrapper_html_example
+<div class="wrapper">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+```
+*/
+
+.wrapper {
+    @include clearfix();
+    margin: 0 auto;
+    position: relative;
+
+    padding-left: rem-calc($_wrapper-padding);
+    padding-right: rem-calc($_wrapper-padding);
+
+    max-width: rem-calc($_wrapper-max-width);
+
+    @include respond-to(medium) {
+        padding-left: rem-calc($_wrapper-padding-medium);
+        padding-right: rem-calc($_wrapper-padding-medium);
+    }
+
+    @include ie8() {
+        width: rem-calc($_wrapper-max-width); //fixed width for IE8
+    }
+}
+
+
+.wrapper--none {
+  padding-left: 0;
+  padding-right: 0;
+  @include respond-to(medium) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/*doc
+---
+title: Responsive Wrapper
+name: 1_wrapper_responsive
+category: layout
+parent: 1_wrapper
+---
+
+`.wrapper--small` behaves as per a normal wrapper, except below the small
+breakpoint, where it has zero padding
+
+```wrapper_html_example
+<div class="wrapper--small">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+```
+*/
+
+.wrapper--small {
+    padding-left: 0;
+    padding-right: 0;
+    @include respond-to(small) {
+        padding-left: rem-calc($_wrapper-padding);
+        padding-right: rem-calc($_wrapper-padding);
+
+        @include clearfix();
+        margin: 0 auto;
+        position: relative;
+        max-width: rem-calc($_wrapper-max-width);
+    }
+    @include respond-to(medium) {
+        padding-left: rem-calc($_wrapper-padding-medium);
+        padding-right: rem-calc($_wrapper-padding-medium);
+    }
+}
+
+.wrapper--large {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include respond-to(large) {
+        padding-left: rem-calc($_wrapper-padding-medium);
+        padding-right: rem-calc($_wrapper-padding-medium);
+
+        @include clearfix();
+        margin: 0 auto;
+        position: relative;
+        max-width: rem-calc($_wrapper-max-width);
+    }
+}
+
+.wrapper--mainnav {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include respond-to(mainnav) {
+        padding-left: rem-calc($_wrapper-padding-medium);
+        padding-right: rem-calc($_wrapper-padding-medium);
+
+        @include clearfix();
+        margin: 0 auto;
+        position: relative;
+        max-width: rem-calc($_wrapper-max-width);
+    }
+}
