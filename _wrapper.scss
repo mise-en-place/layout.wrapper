@@ -56,10 +56,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         padding-left: rem-calc($_wrapper-padding-medium);
         padding-right: rem-calc($_wrapper-padding-medium);
     }
-
-    @include ie8() {
-        width: rem-calc($_wrapper-max-width); //fixed width for IE8
-    }
 }
 
 
