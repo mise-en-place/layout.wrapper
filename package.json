@@ -5,7 +5,7 @@
   "main": "stylesheets/_wrapper.scss",
   "eyeglass": {
     "needs": "^1.0.0",
-    "name": "wrapper",
+    "name": "layout-wrapper",
     "exports": "eyeglass-exports.js"
   },
   "keywords": [
