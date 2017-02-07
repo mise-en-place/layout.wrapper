@@ -1,7 +1,12 @@
 // ==========================================================================
 // WRAPPER LAYOUT
 // ==========================================================================
-//
+
+@import "tool-clearfix";
+@import "tool-rem-calc";
+@import "tool-global-config";
+@import "tool-strip-units";
+
 // CONFIG + SETTINGS
 // Max-width of the wrapper module regardless of the breakpoint,
 // Pulled from grid config, smaller for ie8

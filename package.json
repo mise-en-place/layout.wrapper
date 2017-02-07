@@ -18,5 +18,11 @@
     "url": "https://github.com/mise-en-place/layout.wrapper.git"
   },
   "author": "Kind",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mep-tools.strip-units": "github:mise-en-place/tools.strip-units",
+    "mep-tools.rem-calc": "github:mise-en-place/tools.rem-calc",
+    "mep-tools.clearfix": "github:mise-en-place/tools.clearfix",
+    "mep-tools.global-config": "github:mise-en-place/tools.global-config"
+  }
 }
