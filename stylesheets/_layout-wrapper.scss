@@ -128,18 +128,3 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         max-width: rem-calc($_wrapper-max-width);
     }
 }
-
-.wrapper--mainnav {
-    padding-left: 0;
-    padding-right: 0;
-
-    @include respond-to(mainnav) {
-        padding-left: rem-calc($_wrapper-padding-medium);
-        padding-right: rem-calc($_wrapper-padding-medium);
-
-        @include clearfix();
-        margin: 0 auto;
-        position: relative;
-        max-width: rem-calc($_wrapper-max-width);
-    }
-}
