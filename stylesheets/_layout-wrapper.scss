@@ -2,10 +2,10 @@
 // WRAPPER LAYOUT
 // ==========================================================================
 
-@import "tool-clearfix";
-@import "tool-rem-calc";
-@import "tool-global-config";
-@import "tool-strip-units";
+@import "~mep-tools.clearfix";
+@import "~mep-tools.rem-calc";
+@import "~mep-tools.global-config";
+@import "~mep-tools.strip-units";
 
 // CONFIG + SETTINGS
 // Max-width of the wrapper module regardless of the breakpoint,

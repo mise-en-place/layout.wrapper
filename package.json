@@ -1,15 +1,9 @@
 {
   "name": "mep-layout.wrapper",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Base layout wrapper",
   "main": "stylesheets/_wrapper.scss",
-  "eyeglass": {
-    "needs": "^1.0.0",
-    "name": "layout-wrapper",
-    "exports": "eyeglass-exports.js"
-  },
   "keywords": [
-    "eyeglass-module",
     "sass",
     "mise-en-place"
   ],
